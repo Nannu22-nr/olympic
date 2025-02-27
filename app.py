@@ -8,14 +8,14 @@ import plotly.figure_factory as ff
 import numpy as np
 from helper import medal_tally
 
-df = pd.read_csv("data/athlete_events.csv")
-region_df = pd.read_csv("data/noc_regions.csv")
+df = pd.read_csv("athlete_events.csv")
+region_df = pd.read_csv("noc_regions.csv")
 
 
 df = preprocessor.preprocess(df, region_df)
 
 st.sidebar.title("Olympics Medal Analysis")
-st.sidebar.image("data/olympic_img.jpg")
+st.sidebar.image("olympic_img.jpg")
 user_menu = st.sidebar.radio(
     'Select an Option',
     ('Overall Analysis', 'Medal Tally', 'Country-wise Analysis','Athlete wise Analysis')
